@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8"> <!-- PERMITE USAR CARACTERES ESPECIALES POR EJEMPLO LA Ñ -->
+        <meta content="width=device-width, initial-scale=1.0" name="viewport"> <!-- CONTROLA LAS DIMENSIONES QUE SE MUESTRAN EN DISPOSITIVOS MÓVILES -->
+        <meta content="Aeon Tatoo Studio" name="keywords"> <!-- PALABRAS CLAVE PARA EL MOTOR DE BUSQUEDA -->
+        <meta content="Tatuajes, diseño, perforaciones y joyeria." name="description"><!-- DESCRIPCION DE MI PAGINA WEB -->
+        <title>ÆON Tatoo Studio</title> <!-- TITULO DEL SITIO WEB -->
+        <link rel="stylesheet" href="diseño.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"> <!-- boostrap -->
+
+        <!-- FUENTES QUE SE UTILIZAN EN LA PAGINA WEB-->
+        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Cormorant+Garamond:wght@300;400;500;600&family=Cinzel:wght@400;500;600;700&family=Marcellus&family=Tangerine:wght@400;700&family=Abril+Fatface&family=Bodoni+Moda:wght@400;500;600&family=Dancing+Script:wght@400;500;600;700&family=Great+Vibes&family=Parisienne&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css">
+
+        <!-- ICONO DE LA PAGINA WEB -->
+        <link rel="icon" type="image/png" href="IMAGENES/LogoWeb-removebg-preview.png">
+    </head>
+
+    <!-- CUERPO DE LA PÁGINA WEB -->
+    <body>
+        <header>
+            <!-- BARRA DE NAVEGCION -->
+            <nav>
+                <!-- LOGO -->
+                <a href="index.html">
+                            <div class="logo-container">
+                    <img src="IMAGENES/LogoSecundario-removebg-preview.png" class="logo-img" width="200"> 
+                </div>
+                </a>
+
+                <!-- OTRAS VENTANAS -->
+                <div class="nav-links">
+                    <a href="quienesSomos.html"><i class="fas fa-users"></i> QUIENES SOMOS</a>
+                    <a href="galeria.html" style="color: #A88F4F;"><i class="fas fa-images"></i> GALERIA</a>
+                    <a href="servicios.html"><i class="fas fa-concierge-bell"></i> SERVICIOS</a>
+                    <a href="contacto.html"><i class="fas fa-map-marker-alt"></i> CONTACTO</a>
+                </div>
+            </nav>
+            <!-- CONTENIDO DE PORTADA -->
+            <div class="textos-header header-home">
+                <p class="titulo">Bienvenidos</p>
+                <h1>ÆON</h1>
+                <h2>Elige cicatriz, no debilidad... <br>Te animas?</h2>
+                <div class="times">
+                    <a href="contacto.html" class="boton-cta">Reserva una cita</a>
+                </div>
+            </div>
+        </header>
+
+        <!-- CONTENIDO PRINCIPAL DE LA PáGINA -->
+        <main>
+            <!-- SECCION DESCRIPCION GALERA -->
+            <section id="PORTAFOLIO" class="portafolio">
+                <div class="contenedor">
+                    <h2 class="titulo">Galería</h2>
+                    <div class="texto-introductorio" style="color: rgb(0, 0, 0);">
+                        <p>Explora el portafolio y descubre nuestros trabajos únicos y significativos que hemos creado para nuestros clientes. Cada proyecto es una obra de arte personalizada que cuenta una historia.</p>
+                        <h3 class="titulo2">Inspiración</h3>
+                        <p>Inspírate con los increíbles diseños y estilos de tatuajes que hemos realizado. Nuestro equipo de tatuadores talentosos está listo para transformar tus ideas en realidad.</p>
+                </div>
+
+                <!-- CARRUSEL CON IMAGENES -->
+                <div id="carouselGaleria" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <!-- IMAGEN 1 -->
+                        <div class="carousel-item active imagen-port">
+                            <img src="IMAGENES/CS1.jpg" alt="Tatuaje minimalista de flor en cuello femenino">
+                            <div class="hover-galeria">
+                                <img src="IMAGENES/logoSecundario-removebg-preview.png" alt="Logo de pagina">
+                            </div>
+                        </div>
+                        <!-- IMAGEN 2 -->
+                        <div class="carousel-item imagen-port">
+                            <img src="IMAGENES/GNuca.jpg" alt="Proceso de tatuaje en nuca femenina">
+                            <div class="hover-galeria">
+                                <img src="IMAGENES/logoSecundario-removebg-preview.png" alt="Logo de página">
+                            </div>
+                        </div>
+                        <!-- IMAGEN 3 -->
+                        <div class="carousel-item imagen-port">
+                            <img src="IMAGENES/Galeria.jpg" alt="Tatuaje de dragón en semi-pecho femenino">
+                            <div class="hover-galeria">
+                                <img src="IMAGENES/logoSecundario-removebg-preview.png" alt="Logo de página">
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- CONTROLES DE NAVEGACIÓN (FLECHAS) -->
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselGaleria" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Anterior</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselGaleria" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Siguiente</span>
+                    </button>
+                </div>
+            </section>
+
+            <!-- SECCION TRABAJOS -->
+            <section class="seccion-azul">
+                <div id="GaleriaTatuajes" class="portfolio">
+                    <h1 class="titulo">Tatuajes</h1>
+                    <div class="container-fluid">
+                        <div class="row">
+                            <!-- UN SOLO CONTENEDOR GALLERY PARA TODOS LOS ARTISTAS -->
+                            <div class="gallery col-sm-12">
+                                <!--TATUAJE 1-->
+                                <div class="col-lg-4 col-sm-6 spring no-padding">
+                                    <div class="item-img">
+                                        <div class="part-img">
+                                            <img src="IMAGENES/Tatuaje - planetario.jpg" alt="image">
+                                            <div class="overlay-img">
+                                                <h4>Aeon Tattoo Studio</h4>
+                                                <h6>Tatuaje Planetario</h6>
+                                            </div>
+                                        <!-- VENTANA EMERGENTE -->
+                                        <div>
+                                            <a class="emergente-btn" href="IMAGENES/Tatuaje - planetario.jpg" data-title="desc-emergente-1">
+                                                <i class="fa fa-plus text-primary" style="font-size: 60px;"></i>
+                                            </a>
+                                            <div class="emergente-description" id="desc-emergente-1">
+                                                <h1>Tatuaje Planetario</h1>
+                                                <p>Tatuaje en la zona de la muñeca y el antebrazo.</p>
+                                            </div>
+                                        </div>
+                                        </div>
+                                        
+                                    </div>
+                                    
+                                </div>
+                                
+                                <!--TATUAJE 2-->
+                                <div class="col-lg-4 col-sm-6 spring no-padding">
+                                    <div class="item-img">
+                                        <div class="part-img">
+                                            <img src="IMAGENES/Tatuaje - Diosa Griega.jpg" alt="image">
+                                            <div class="overlay-img">
+                                                <h4>Aeon Tattoo Studio</h4>
+                                                <h6>Tatuaje - Diosas Griegas</h6>
+                                            </div>
+                                        <!-- VENTANA EMERGENTE -->
+                                        <div>
+                                            <a class="emergente-btn" href="IMAGENES/Tatuaje - Diosa Griega.jpg" data-title="desc-emergente-2">
+                                                <i class="fa fa-plus text-primary" style="font-size: 60px;"></i>
+                                            </a>
+                                            <div class="emergente-description" id="desc-emergente-2">
+                                                <h1>Tatuaje - Diosas Griegas</h1>
+                                                <p>Tatuaje de alto detalle de la diosa Deméter de la cosecha.</p>
+                                            </div>
+                                        </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--TATUAJE 3-->
+                                <div class="col-lg-4 col-sm-6 spring no-padding">
+                                    <div class="item-img">
+                                        <div class="part-img">
+                                            <img src="IMAGENES/Tatuaje - Colibri.jpg" alt="image">
+                                            <div class="overlay-img">
+                                                <h4>Aeon Tattoo Studio</h4>
+                                                <h6>Tatuaje Colibrí</h6>
+                                            </div>
+                                        <!-- VENTANA EMERGENTE -->
+                                        <div>
+                                            <a class="emergente-btn" href="IMAGENES/Tatuaje - Colibri.jpg" data-title="desc-emergente-3">
+                                                <i class="fa fa-plus text-primary" style="font-size: 60px;"></i>
+                                            </a>
+                                            <div class="emergente-description" id="desc-emergente-3">
+                                                <h1>Tatuaje Colibrí</h1>
+                                                <p>Tatuaje de color con diseño de colibrí.</p>
+                                            </div>
+                                        </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- DISEÑOS -->
+                <div id="GaleriaDiseños" class="portfolio" style="padding-top: 0%;">
+                    <h1 class="titulo">Diseños</h1>
+                    <div class="container-fluid">
+                        <div class="row">
+                            <!-- UN SOLO CONTENEDOR GALLERY PARA TODOS LOS ARTISTAS -->
+                            <div class="gallery col-sm-12">
+                                <!--TATUAJE 1-->
+                                <div class="col-lg-4 col-sm-6 spring no-padding">
+                                    <div class="item-img">
+                                        <div class="part-img">
+                                            <img src="IMAGENES/Diseño - Lobo.jpg" alt="image">
+                                            <div class="overlay-img">
+                                                <h4>Aeon Tattoo Studio</h4>
+                                                <h6>Diseño tatuaje lobo</h6>
+                                            </div>
+                                        <!-- VENTANA EMERGENTE -->
+                                        <div>
+                                            <a class="emergente-btn" href="IMAGENES/Diseño - Lobo.jpg" data-title="desc-emergente-4">
+                                                <i class="fa fa-plus text-primary" style="font-size: 60px;"></i>
+                                            </a>
+                                            <div class="emergente-description" id="desc-emergente-4">
+                                                <h1>Diseño tatuaje lobo</h1>
+                                                <p>Dibujo a lápiz o tinta de un lobo aullando, ejecutado en un estilo predominantemente geométrico o "poligonal".</p>
+                                            </div>
+                                        </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--TATUAJE 2-->
+                                <div class="col-lg-4 col-sm-6 spring no-padding">
+                                    <div class="item-img">
+                                        <div class="part-img">
+                                            <img src="IMAGENES/Diseño - Flor Lirio.jpg" alt="image">
+                                            <div class="overlay-img">
+                                                <h4>Aeon Tattoo Studio</h4>
+                                                <h6>Diseño Flor de loto</h6>
+                                            </div>
+                                        <!-- VENTANA EMERGENTE -->
+                                        <div>
+                                            <a class="emergente-btn" href="IMAGENES/Diseño - Flor Lirio.jpg" data-title="desc-emergente-5">
+                                                <i class="fa fa-plus text-primary" style="font-size: 60px;"></i>
+                                            </a>
+                                            <div class="emergente-description" id="desc-emergente-5">
+                                                <h1>Diseño Flor de loto</h1>
+                                                <p>La composición central es una Flor de Loto, de la que se desprende un intrincado y elegante patrón colgante.</p>
+                                            </div>
+                                        </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--TATUAJE 3-->
+                                <div class="col-lg-4 col-sm-6 spring no-padding">
+                                    <div class="item-img">
+                                        <div class="part-img">
+                                            <img src="IMAGENES/Diseño - Brujula.jpg" alt="image">
+                                            <div class="overlay-img">
+                                                <h4>Aeon Tattoo Studio</h4>
+                                                <h6>Diseño Brújula</h6>
+                                            </div>
+                                        <!-- VENTANA EMERGENTE -->
+                                        <div>
+                                            <a class="emergente-btn" href="IMAGENES/Diseño - Brujula.jpg" data-title="desc-emergente-6">
+                                                <i class="fa fa-plus text-primary" style="font-size: 60px;"></i>
+                                            </a>
+                                            <div class="emergente-description" id="desc-emergente-6">
+                                                <h1>Diseño Brújula</h1>
+                                                <p>Combina una Rosa de los Vientos (Brújula) con un marco de elementos orgánicos y florales.</p>
+                                            </div>
+                                        </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- PERFORACIONES -->
+                <div id="GaleriaPerforaciones" class="portfolio" style="padding-top: 0">
+                    <h1 class="titulo">Perforaciones</h1>
+                    <div class="container-fluid">
+                        <div class="row">
+                            <!-- UN SOLO CONTENEDOR GALLERY PARA TODOS LOS ARTISTAS -->
+                            <div class="gallery col-sm-12">
+                                <!--TATUAJE 1-->
+                                <div class="col-lg-4 col-sm-6 spring no-padding">
+                                    <div class="item-img">
+                                        <div class="part-img">
+                                            <img src="IMAGENES/Perforacion - Industrial.jpg" alt="image">
+                                            <div class="overlay-img">
+                                                <h4>Aeon Tattoo Studio</h4>
+                                                <h6>Perforación Industrial</h6>
+                                            </div>
+                                        <!-- VENTANA EMERGENTE -->
+                                        <div>
+                                            <a class="emergente-btn" href="IMAGENES/Perforacion - Industrial.jpg" data-title="desc-emergente-7">
+                                                <i class="fa fa-plus text-primary" style="font-size: 60px;"></i>
+                                            </a>
+                                            <div class="emergente-description" id="desc-emergente-7">
+                                                <h1>Perforación Industrial</h1>
+                                                <p>El conjunto crea un estilo visualmente interesante y equilibrado, combinando la línea audaz del piercing industrial.</p>
+                                            </div>
+                                        </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--TATUAJE 2-->
+                                <div class="col-lg-4 col-sm-6 spring no-padding">
+                                    <div class="item-img">
+                                        <div class="part-img">
+                                            <img src="IMAGENES/Perforacion - Vertical ceja.jpg" alt="image">
+                                            <div class="overlay-img">
+                                                <h4>Aeon Tattoo Studio</h4>
+                                                <h6>Perforación Vertical ceja</h6>
+                                            </div>
+                                        <!-- VENTANA EMERGENTE -->
+                                        <div>
+                                            <a class="emergente-btn" href="IMAGENES/Perforacion - Vertical ceja.jpg" data-title="desc-emergente-8">
+                                                <i class="fa fa-plus text-primary" style="font-size: 60px;"></i>
+                                            </a>
+                                            <div class="emergente-description" id="desc-emergente-8">
+                                                <h1>Perforación Vertical ceja</h1>
+                                                <p>El estilo es minimalista y moderno, utilizando joyas de metal simple.</p>
+                                            </div>
+                                        </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--TATUAJE 3-->
+                                <div class="col-lg-4 col-sm-6 spring no-padding">
+                                    <div class="item-img">
+                                        <div class="part-img">
+                                            <img src="IMAGENES/Perforacion - Septum.jpg" alt="image">
+                                            <div class="overlay-img">
+                                                <h4>Aeon Tattoo Studio</h4>
+                                                <h6>Perforación Septum</h6>
+                                            </div>
+                                        <!-- VENTANA EMERGENTE -->
+                                        <div>
+                                            <a class="emergente-btn" href="IMAGENES/Perforacion - Septum.jpg" data-title="desc-emergente-9">
+                                                <i class="fa fa-plus text-primary" style="font-size: 60px;"></i>
+                                            </a>
+                                            <div class="emergente-description" id="desc-emergente-9">
+                                                <h1>Perforación Septum</h1>
+                                                <p>Este aro ha sido personalizado o es una pieza diseñada con cristales brillantes en el centro inferior.</p>
+                                            </div>
+                                        </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- JOYERIA -->
+                <div id="GaleriaJoyeria" class="portfolio" style="padding-top: 0">
+                    <h1 class="titulo">Joyería</h1>
+                    <div class="container-fluid">
+                        <div class="row">
+                            <!-- UN SOLO CONTENEDOR GALLERY PARA TODOS LOS ARTISTAS -->
+                            <div class="gallery col-sm-12">
+                                <!--TATUAJE 1-->
+                                <div class="col-lg-4 col-sm-6 spring no-padding">
+                                    <div class="item-img">
+                                        <div class="part-img">
+                                            <img src="IMAGENES/Joyeria - Tonos rosados.jpg" alt="image">
+                                            <div class="overlay-img">
+                                                <h4>Aeon Tattoo Studio</h4>
+                                                <h6>Joyería en tonos rosados</h6>
+                                            </div>
+                                        <!-- VENTANA EMERGENTE -->
+                                        <div>
+                                            <a class="emergente-btn" href="IMAGENES/Joyeria - Tonos rosados.jpg" data-title="desc-emergente-10">
+                                                <i class="fa fa-plus text-primary" style="font-size: 60px;"></i>
+                                            </a>
+                                            <div class="emergente-description" id="desc-emergente-10">
+                                                <h1>Joyería en tonos rosados</h1>
+                                                <p>Pares distintos de barras para piercings, cada uno con un diseño temático.</p>
+                                            </div>
+                                        </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--TATUAJE 2-->
+                                <div class="col-lg-4 col-sm-6 spring no-padding">
+                                    <div class="item-img">
+                                        <div class="part-img">
+                                            <img src="IMAGENES/Joyeria - Dorada.jpg" alt="image">
+                                            <div class="overlay-img">
+                                                <h4>Aeon Tattoo Studio</h4>
+                                                <h6>Joyería Dorada</h6>
+                                            </div>
+                                        <!-- VENTANA EMERGENTE -->
+                                        <div>
+                                            <a class="emergente-btn" href="IMAGENES/Joyeria - Dorada.jpg" data-title="desc-emergente-11">
+                                                <i class="fa fa-plus text-primary" style="font-size: 60px;"></i>
+                                            </a>
+                                            <div class="emergente-description" id="desc-emergente-11">
+                                                <h1>Joyería Dorada</h1>
+                                                <p>Surtido de joyas pequeñas, principalmente para perforaciones de cartílago (helix, tragus, conch) y lóbulo.</p>
+                                            </div>
+                                        </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--TATUAJE 3-->
+                                <div class="col-lg-4 col-sm-6 spring no-padding">
+                                    <div class="item-img">
+                                        <div class="part-img">
+                                            <img src="IMAGENES/Joyeria - Arcoiris.jpg" alt="image">
+                                            <div class="overlay-img">
+                                                <h4>Aeon Tattoo Studio</h4>
+                                                <h6>Joyería Arcoíris</h6>
+                                            </div>
+                                        <!-- VENTANA EMERGENTE -->
+                                        <div>
+                                            <a class="emergente-btn" href="IMAGENES/Joyeria - Arcoiris.jpg" data-title="desc-emergente-12">
+                                                <i class="fa fa-plus text-primary" style="font-size: 60px;"></i>
+                                            </a>
+                                            <div class="emergente-description" id="desc-emergente-12">
+                                                <h1>Joyería Arcoíris</h1>
+                                                <p>Piezas de joyería de metal plateado (acero quirúrgico) con gemas de colores, abarcando diferentes tipos de perforaciones.</p>
+                                            </div>
+                                        </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- PIE DE PÁGINA -->
+        <footer>
+            <div class="contenedor-footer">
+                <!-- Información de la tienda -->
+                <div class="content-foo">
+                    <h4>Estudio ÆON</h4>
+                    <p>Av. Diego de Almagro N24-416 y Av. La Coruña<br>
+                    Sector La Floresta, Quito</p>
+                </div>
+
+                <!-- Contacto -->
+                <div class="content-foo">
+                    <h4>Teléfono</h4>
+                    <p>+593 99 972 0593<br>
+                    <small>Lunes a Sábado: 10:00 - 19:00</small></p>
+                    
+                    <h4 style="margin-top:15px;">Email</h4>
+                    <p>solegranoble17@gmail.com<br>
+                    <small>Respuesta en 24-48 horas</small></p>
+                </div>
+
+                <!-- Redes sociales -->
+                <div class="content-foo">
+                    <h4>Síguenos</h4>
+                    <div class="social-icons">
+                        <a href="https://www.instagram.com/anisgranoble/" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.facebook.com/Devsoledgranoble" target="_blank"><i class="fab fa-facebook"></i></a>
+                        <a href="https://wa.me/qr/B73P3IY7AWVBG1" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+            </div>
+            <h2 class="titulo-final">&copy; ÆON Tatoo Studio Designed by DenisseG - 2025</h2>
+        </footer>
+        <!-- BOTON FLOTANTE -->
+        <div class="boton-flotante">
+            <a>
+                <button class="shareButton main">
+                    <svg class="share" viewBox="0 0 24 24">
+                        <path d="M18,16.08C17.24,16.08 16.56,16.38 16.04,16.85L8.91,12.7C8.96,12.47 9,12.24 9,12C9,11.76 8.96,11.53 8.91,11.3L15.96,7.19C16.5,7.69 17.21,8 18,8A3,3 0 0,0 21,5A3,3 0 0,0 18,2A3,3 0 0,0 15,5C15,5.24 15.04,5.47 15.09,5.7L8.04,9.81C7.5,9.31 6.79,9 6,9A3,3 0 0,0 3,12A3,3 0 0,0 6,15C6.79,15 7.5,14.69 8.04,14.19L15.16,18.34C15.11,18.55 15.08,18.77 15.08,19C15.08,20.61 16.39,21.91 18,21.91C19.61,21.91 20.92,20.61 20.92,19A2.92,2.92 0 0,0 18,16.08Z" />
+                    </svg>
+                    <svg class="check" viewBox="0 0 24 24">
+                        <path d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z" />
+                    </svg>
+                    <svg class="close" viewBox="0 0 24 24">
+                        <path d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z" />
+                    </svg>
+                </button>
+            </a>
+
+            <a href="https://www.facebook.com/Devsoledgranoble" target="_blank">
+                <button class="shareButton fb">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M17,2V2H17V6H15C14.31,6 14,6.81 14,7.5V10H14L17,10V14H14V22H10V14H7V10H10V6A4,4 0 0,1 14,2H17Z" />
+                    </svg>
+                </button>
+            </a>
+
+            <a href="https://www.instagram.com/anisgranoble/" target="_blank">
+                <button class="shareButton ig">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M7.8,2H16.2C19.4,2 22,4.6 22,7.8V16.2A5.8,5.8 0 0,1 16.2,22H7.8C4.6,22 2,19.4 2,16.2V7.8A5.8,5.8 0 0,1 7.8,2M7.6,4A3.6,3.6 0 0,0 4,7.6V16.4C4,18.39 5.61,20 7.6,20H16.4A3.6,3.6 0 0,0 20,16.4V7.6C20,5.61 18.39,4 16.4,4H7.6M17.25,5.5A1.25,1.25 0 0,1 18.5,6.75A1.25,1.25 0 0,1 17.25,8A1.25,1.25 0 0,1 16,6.75A1.25,1.25 0 0,1 17.25,5.5M12,7A5,5 0 0,1 17,12A5,5 0 0,1 12,17A5,5 0 0,1 7,12A5,5 0 0,1 12,7M12,9A3,3 0 0,0 9,12A3,3 0 0,0 12,15A3,3 0 0,0 15,12A3,3 0 0,0 12,9Z" />
+                    </svg>
+                </button>
+            </a>
+
+            <a href="https://wa.me/qr/B73P3IY7AWVBG1" target="_blank">
+                <button class="shareButton wa">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M16.75,13.96C17,14.09 17.16,14.16 17.21,14.26C17.27,14.37 17.25,14.87 17,15.44C16.8,16 15.76,16.54 15.3,16.56C14.84,16.58 14.83,16.92 12.34,15.83C9.85,14.74 8.35,12.08 8.23,11.91C8.11,11.74 7.27,10.53 7.31,9.3C7.36,8.08 8,7.5 8.26,7.26C8.5,7 8.77,6.97 8.94,7H9.41C9.56,7 9.77,6.94 9.96,7.45L10.65,9.32C10.71,9.45 10.75,9.6 10.66,9.76L10.39,10.17L10,10.59C9.89,10.71 9.74,10.84 9.88,11.09C10,11.35 10.5,12.08 11.21,12.71C12.11,13.5 12.91,13.84 13.18,14C13.45,14.15 13.57,14.11 13.72,13.96L14.5,13.14C14.69,12.94 14.93,12.89 15.09,12.99L16.75,13.96M12,2A10,10 0 0,1 22,12A10,10 0 0,1 12,22C10.03,22 8.2,21.43 6.65,20.45L2,22L3.55,17.35C2.57,15.8 2,13.97 2,12A10,10 0 0,1 12,2M12,4A8,8 0 0,0 4,12C4,13.72 4.54,15.31 5.46,16.61L4.5,19.5L7.39,18.54C8.69,19.46 10.28,20 12,20A8,8 0 0,0 20,12A8,8 0 0,0 12,4Z" />
+                    </svg>
+                </button>
+            </a>
+        </div>
+        <script src="botonFlotante.js"></script> 
+
+        <!-- SCTIPT se utiliza para insertar código ejecutable, principalmente JavaScript -->
+        <!-- Bootstrap para carrusel -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+        <!-- SCTIPT se utiliza para insertar código ejecutable, principalmente JavaScript -->
+            <!-- LOCALES -->
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="emergente.js"></script> 
+    </body>
+</html>

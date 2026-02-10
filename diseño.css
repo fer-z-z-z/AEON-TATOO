@@ -1,0 +1,1881 @@
+/* Importación de fuentes de Google */
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Inter:wght@300;400;500;600;700&display=swap');
+
+/* ESTILOS GENERALES Y RESET */
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+/* LOGOTIPO */
+.logo-container {
+    height: 75px;
+    display: flex;
+    align-items: center;
+}
+
+/* BARRA DE NAVEGACIÓN */
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #14172a; /* Azul Noche Profundo */
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 5%;
+}
+
+/*FUENTE QUE SE LE APLICA AL LOGO*/
+/*CLASE TALVEZ NO SE USA*/
+.logo-text {
+    font-family: 'Cinzel Decorative', serif;
+    font-weight: 900;
+    font-size: 24px;
+    color: #F5F5DC; /* Crema Suave */
+    letter-spacing: 1.5px;
+}
+
+.font-name {
+    font-size: 1.8rem;
+    margin-bottom: 25px;
+    color: #2c3e50;
+    border-bottom: 2px solid #f1f2f6;
+    padding-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/*FUENTES NUEVAS*/
+.cinzel { font-family: 'Cinzel', serif; }
+.cormorant {font-family: 'Cormorant Garamond', serif;}
+.times{
+    font-family: "Times New Roman", Times, serif;
+}
+
+
+/* ENLACES DE NAVEGACIÓN */
+.nav-links {
+    display: flex;
+    gap: 30px;
+    color: #F5F5DC; /* Crema Suave */
+}
+
+/*AQUI SE DEFINE EL ESTILO DE LETRA */
+.nav-links a {
+    font-family: "Times New Roman", Times, serif;
+    text-decoration: none;
+    color: #F5F5DC; /* Crema Suave */
+    font-weight: 500;
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s;
+    position: relative;
+}
+
+.nav-links a:hover {
+    color: #A88F4F; /* Dorado Antiguo */
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background-color: #A88F4F; /* Dorado Antiguo */
+    transition: width 0.3s;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+
+.no-padding {
+    padding: 0px !important;
+}
+
+.container-fluid {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 0px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.col-sm-6, .col-sm-12, .col-lg-4 {
+    position: relative;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.col-sm-6 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 50%;
+    flex: 0 0 50%;
+    max-width: 50%;
+}
+
+.col-sm-12 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
+}
+
+@media (min-width: 992px) {
+    .col-lg-4 {
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 33.333333%;
+        flex: 0 0 33.333333%;
+        max-width: 33.333333%;
+    }
+}
+
+.portfolio {
+    padding: 100px 0px;
+    padding-top: 5%;
+}
+
+/*AÑADIMOS ESTO*/
+/* NUEVO CSS PARA LA GALERÍA DE ARTISTAS - CUADRÍCULA */
+.portfolio .container-fluid .row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;/*MODIFICA EL ESPACIO ENTRE IMAGENES*/
+    padding-left: 0%;/*EL PADDING DE TODAS LAS IMAGENES EN LA IZQUIERDA*/
+    padding-right: 10%;/*EL PADDING DE TODAS LAS IMAGENES EN LA DERECHA*/
+}
+
+.portfolio .gallery {
+    display: contents; /* Permite que los elementos hijos participen en el grid del padre */
+}
+
+.portfolio .gallery .col-lg-4 {
+    position: relative;
+    width: 100%;
+    margin: 60px;
+}
+
+.portfolio .gallery .item-img {
+    position: relative;
+    overflow: hidden;
+    height: 0;
+    padding-bottom: 100%; /* Esto crea el cuadrado perfecto */
+    width: 300%;
+    height: 180%;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.portfolio .gallery /*.item-img a*/ {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.portfolio .gallery .item-img .part-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;}
+
+.portfolio .gallery .item-img .part-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Asegura que la imagen cubra el cuadrado sin distorsión */
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+.portfolio .gallery .item-img .part-img .overlay-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.portfolio .gallery .item-img .part-img .overlay-img:after {
+    content: '';
+    position: absolute;
+    left: -100%;
+    top: 0;
+    width: 100%;
+    height: 50%;
+    background: rgba(0, 0, 0, 0.8);
+    -webkit-transition: all 150ms ease-in-out 200ms;
+    transition: all 150ms ease-in-out 200ms;
+}
+
+.portfolio .gallery .item-img .part-img .overlay-img:before {
+    content: '';
+    position: absolute;
+    right: -100%;
+    bottom: 0;
+    width: 100%;
+    height: 50%;
+    background: rgba(0, 0, 0, 0.8);
+    -webkit-transition: all 150ms ease-in-out 200ms;
+    transition: all 150ms ease-in-out 200ms;
+}
+
+.portfolio .gallery .item-img .part-img .overlay-img a {
+    width: 100%;
+    height: 100%;
+}
+
+.portfolio .gallery .item-img .part-img .overlay-img h4 {
+    color: transparent;
+    overflow: hidden;
+    position: absolute;
+    top: 54px;
+    right: 25px;
+    z-index: 2;
+    font-size: 18px;
+    -webkit-transition: color 150ms ease-in-out 200ms;
+    transition: color 150ms ease-in-out 200ms;
+    text-align: center;
+    padding: 0 10px;
+    font-family: "Times New Roman", Times, serif;/*ESTO CAMBIA LA TIPOGRAFIA DENTRO DE LA IMAGEN DE GALERIA DESPUES DE PASAR EL CURSOR POR ENCIMA*/
+
+}
+
+.portfolio .gallery .item-img .part-img .overlay-img h4:before {
+    content: '';
+    background: #fff;
+    bottom: 0;
+    position: absolute;
+    right: 100%;
+    top: 0;
+    width: 100%;
+    -webkit-transition: right 600ms ease-in-out 0s;
+    transition: right 600ms ease-in-out 0s;
+}
+
+.portfolio .gallery .item-img .part-img .overlay-img h6 {
+    color: transparent;
+    overflow: hidden;
+    position: absolute;
+    top: 30px;
+    right: 25px;
+    z-index: 2;
+    font-size: 18px;
+    -webkit-transition: color 150ms ease-in-out 200ms;
+    transition: color 150ms ease-in-out 200ms;
+    text-align: center;
+    padding: 0 10px;
+    font-family: 'Cormorant Garamond', serif; /*LETRA CORMORANT*/
+
+}
+
+.portfolio .gallery .item-img .part-img .overlay-img h6::before {
+    content: '';
+    background: #fff;
+    bottom: 0;
+    right: auto;
+    position: absolute;
+    left: 100%;
+    top: 0;
+    width: 100%;
+    -webkit-transition: left 600ms ease-in-out 0s;
+    transition: left 600ms ease-in-out 0s;
+}
+
+.portfolio .gallery .item-img:hover img {
+    -webkit-transform: scale(1.04);
+    transform: scale(1.04);
+}
+
+.portfolio .gallery .item-img:hover .overlay-img:after {
+    left: 0;
+    -webkit-transition: all .8s;
+    transition: all .8s;
+    opacity: 1;
+}
+
+.portfolio .gallery .item-img:hover .overlay-img:before {
+    right: 0;
+    width: 100%;
+    height: 50%;
+    -webkit-transition: all .8s;
+    transition: all .8s;
+    opacity: 1;
+}
+
+.portfolio .gallery .item-img:hover .overlay-img h4 {
+    color: #A88F4F; /* Dorado Antiguo */
+    font-family: "Times New Roman", Times, serif;/*ESTO CAMBIA LA TIPOGRAFIA DENTRO DE LA IMAGEN DE GALERIA DESPUES DE PASAR EL CURSOR POR ENCIMA*/
+    font-weight: bold;
+}
+
+.portfolio .gallery .item-img:hover .overlay-img h4:before {
+    right: -100%;
+}
+
+.portfolio .gallery .item-img:hover .overlay-img h6 {
+    color: white;
+    font-family: 'Cormorant Garamond', serif; /*LETRA CORMORANT*/
+}
+
+.portfolio .gallery .item-img:hover .overlay-img h6:before {
+    left: -100%;
+}
+
+/************************************************TARJETAS ****************************************************/
+
+.seccion-celeste{
+    background-color: #1a2c42;
+}
+
+.container{
+    padding-top: 3%;
+    padding-block-end: 5%;
+}
+
+.tarjeta-item{
+    height: 300px;
+    width: 300px;
+    overflow: hidden;
+}
+
+.tarjeta-item img {
+    transition: .5s;
+}
+
+.tarjeta-item:hover img {
+    transform: scale(1.3);
+}
+
+.tarjeta-overlay {
+    overflow: hidden;
+    height: 300px;
+    width: 300px;
+    position:absolute;
+    top: -0.5px;
+    right: 30px;
+    bottom: 30px;
+    left: 1px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.3);
+    border: 5px solid rgba(255, 255, 255, 0.5);
+    transition: .5s;
+    z-index: 1;
+    overflow: hidden;
+
+}
+
+.tarjeta-item:hover .tarjeta-overlay {
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    border-width: 15px;
+}
+
+.home-cont {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 15px;
+    margin-top: 30px;
+}
+
+/**********************************/
+/******** VENTANA EMERGENTE ********/
+/**********************************/
+/* PARA QUE NO ME MUESTRE UNA DESCRIPCION */
+.lb-number {
+    display: none !important;
+}
+
+.emergente-btn {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    /* transition: all 0.3s ease; */
+    text-decoration: none;
+}
+
+/* Custom Lightbox Styles */
+.custom-lightbox-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(150, 150, 150, 0.9);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+}
+
+.custom-lightbox-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.custom-lightbox-container {
+    padding-top: 2%;
+    position: relative;
+    max-width: 100%;/*ESTO HACE QUE TODO EL CONTENIDO QUEPA EN LA PANTALLA*/
+    max-height: 100%;
+    background-color: #1a2c42;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    transform: scale(0.8);
+    transition: transform 0.3s ease;
+}
+
+.custom-lightbox-overlay.active .custom-lightbox-container {
+    transform: scale(1);
+}
+
+.custom-lightbox-image {
+    padding-block-end: 0%;
+    max-width: 100%;
+    max-height: 70vh;
+    display: block;
+    margin: 0 auto;
+}
+
+.custom-lightbox-close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 10000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.3s ease;
+}
+
+.custom-lightbox-close:hover {
+    background: rgba(0, 0, 0, 0.9);
+}
+
+.custom-lightbox-description {
+    padding: 20px;
+    background-color: #1a2c42;
+    text-align: center;
+}
+
+.custom-lightbox-description h1 {
+    font-family: "Times New Roman", Times, serif!important;
+    color: #A88F4F!important;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #333;
+    font-weight: bold;
+}
+
+.custom-lightbox-description p {
+    font-family: 'Cormorant Garamond', serif !important;
+    color: #fff;
+    font-size: 1rem;
+    margin: 0;
+    line-height: 1.5;
+}
+
+/* Ocultar las descripciones originales en la página */
+.emergente-description {
+    display: none !important;
+
+}
+
+
+
+/************************************************NUESTROS ARTISTAS****************************************************/
+
+/*********************************************************************************************************************/
+/*DEGRADADO DE IMAGEN DE CABECERA */
+/* Estilos para el header */
+
+/* La imagen como fondo (detrás del texto) */
+.header-home {
+    width: 100%;
+    height: 800px;
+    background: 
+        radial-gradient(
+            circle at center, 
+            rgba(18, 17, 33, 0.9),  /* #A88F4F con 70% de opacidad */
+            rgba(37, 25, 49, 0.6)     /* #1A2C42 con 90% de opacidad */
+        ), 
+
+        url(IMAGENES/Imagen\ principal\ degradada.jpg);
+    background-size: 55%; /*ESTE APARTADO CAMBIA EL TAMAÑO DE LA IMAGEN DE FONDO DEGRADADA*/
+    background-attachment: fixed;
+    position: relative;
+
+}
+
+.textos-header {
+    display: flex;
+    height: 450px;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    padding-top: 70px;/*AJUSTA MAS EL ESPACIO ENTRE EL MARGEN Y EL TEXTO*/
+}
+
+.textos-header h1 {
+    font-family: 'Cinzel Decorative', serif;
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: #F5F5DC; /* Crema Suave */
+    line-height: 1.2;
+    text-shadow: 2px 2px 4px rgb(255, 255, 255); /*SIRVE PARA DAR SOMBRA O BRILLO A LA LETRA*/
+    margin-bottom: 20px;
+}
+
+.textos-header h2 {
+    font-family: 'Cinzel Decorative', serif;
+    font-weight: 300;
+    font-size: 1.8rem;
+    color: #fbfbfa; /* Dorado Antiguo */
+}
+
+/******************************************QUIENES SOMOS**************************************/
+.header-quienes-somos {
+    width: 100%;
+    height: 450px;/*ESTO MODIFICA EL TAMAñO DEL CONTENEDOR DE LA IMAGEN*/
+    background: 
+        radial-gradient(
+            circle at center, 
+            rgba(18, 17, 33, 0.9),  /* #A88F4F con 70% de opacidad */
+            rgba(37, 25, 49, 0.6)     /* #1A2C42 con 90% de opacidad */
+        ), 
+
+        url(IMAGENES/PORTADA-QUIENES\ SOMOS.png);
+    background-size:100%; /*ESTE APARTADO CAMBIA EL TAMAÑO DE LA IMAGEN DE FONDO DEGRADADA*/
+    background-attachment: fixed;
+    position:relative;
+    background-position: center -2%; /* o el valor que necesites */
+}
+
+/*****************************************************************************************************************/
+/*CONTENIDO PRINCIPAL*/
+
+.seccion-azul{
+    background-color: #1a2c42;
+}
+
+.boton-flotante {
+    position: fixed;
+    bottom: 20px;
+    right: 40px;
+    z-index: 100;
+    font-size: 0px; /* Tamaño personalizado */
+}
+
+.columna-info{
+    padding-top: 20%;
+    padding-right: 15%;
+    padding-left: 0%;
+}
+
+.hero-premium {
+    font-family: 'Cormorant Garamond', serif; /*LETRA CORMORANT*/
+    padding-top: 30px;/*AJUSTA MAS EL ESPACIO ENTRE EL MARGEN Y EL TEXTO*/
+    background: white;
+    background-size: cover;
+    background-position: center;
+    color: rgb(0, 0, 0);/*COLOR DE LA LETRA DE LA PAGINA*/
+    padding-right: 20px;
+    padding-block-end: 55px;
+}
+
+.contenedor-hero {
+    margin: 0 auto;
+}
+
+.grid-hero {
+    padding-top: 5%;
+    font-family: 'Cormorant Garamond', serif; /*LETRA CORMORANT*/
+    display: grid;
+    grid-template-columns: 0.8fr 0.8fr;
+    gap: 0px;
+    color: rgb(0, 0, 0);    
+}
+
+/* Tipografía */
+.titulo {
+    color: #A88F4F; /* Dorado Antiguo */
+    font-size: 50px;
+    text-align: center;
+    margin-bottom: 10px;
+    font-weight: 700;
+    font-family: "Times New Roman", Times, serif;
+    font-weight: normal;/*CAMBIAR A "bold" SI SE QUIERE EN NEGRILLA*/
+}
+
+.titulo-blanco {
+    color: #ffffff; /* Dorado Antiguo */
+    font-size: 50px;
+    text-align: center;
+    margin-bottom: 10px;
+    font-weight: 700;
+    font-family: "Times New Roman", Times, serif;
+    font-weight: normal;
+
+}
+
+.titulo2 {
+    font-family: "Times New Roman", Times, serif;
+    color: #A88F4F; /* Dorado Antiguo */
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 10px;
+    font-weight: normal;
+    padding-top: 35px;/*AJUSTA MAS EL ESPACIO ENTRE EL MARGEN Y EL TEXTO*/
+
+    
+}
+
+.titulo-hero {
+    font-size: 2.8em;
+    margin-bottom: 40px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.texto-dorado {
+    color: #c9a145;
+}
+
+.destacado-hero {
+    font-size: 1.3em;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    text-align: center;
+
+}
+
+/* Lista de beneficios */
+.lista-beneficios {
+    margin: 30px 0;
+    padding-left: 20px;
+    padding-top: 0;
+}
+
+.lista-beneficios li {
+    margin-bottom: 15px;
+    font-size: 1.1em;
+}
+
+/* Certificaciones */
+.certificaciones {
+    display: flex;
+    gap: 20px;
+    margin-top: 40px;
+    transition: transform 0.3s;
+
+}
+
+.certificaciones:hover {
+    transform: translateY(-10px);
+}
+
+.badge-cert {
+    background: rgba(255,255,255,0.1);
+    border-radius: 8px;
+    padding: 15px;
+    text-align: center;
+    min-width: 120px;
+}
+
+.badge-cert img {
+    margin-bottom: 10px;
+}
+
+.badge-cert span {
+    font-size: 0.9em;
+    display: block;
+}
+
+/* Galería */
+.galeria-hero {
+    padding-left: 125px;
+
+}
+
+.img-principal {
+    width: 75%;
+    border-radius: 75px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    align-items: center;
+}
+
+.miniaturas {
+    padding-left: 100px;
+    padding-top: 20px;
+
+}
+
+.miniaturas img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s;
+
+}
+
+.miniaturas img:hover {
+    transform: scale(1.1);
+}
+
+/* CTA */
+.cta-hero {
+    background: rgba(201, 161, 69, 0.2);
+    border: 1px solid #c9a145;
+    border-radius: 10px;
+    padding: 25px;
+    margin-top: 30px;
+    text-align: center;
+}
+
+.texto-cta {
+    font-size: 1.2em;
+    margin-bottom: 15px;
+}
+
+.boton-cta {
+    background: #c9a145;
+    color: #000;
+    padding: 12px 30px;
+    border-radius: 50px;
+    font-weight: normal;
+    display: inline-block;
+    transition: all 0.3s;
+    text-decoration: none;
+}
+
+.boton-cta:hover {
+    background: #14172a;
+    color: #c9a145;
+    transform: translateY(-3px);
+}
+
+.telefono-cta {
+    margin-top: 15px;
+    font-size: 1.1em;
+}
+
+/******************************************************************************************/
+
+/* GALERÍA/PORTAFOLIO */
+.portafolio {
+    background: #ffffff; 
+    /*padding: 60px 0;*/
+    padding-left: 75px;
+    padding-right: 75px;
+    padding-top: 0%;
+}
+
+.portafolio p{
+    font-family: 'Cormorant Garamond', serif; /*LETRA CORMORANT*/
+    font-size:125%;
+
+}
+
+.galeria-port {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 30px;
+}
+
+/*ESTE ES EL MARCO DE COLOR DORADO*/
+.imagen-port {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    height: 350px;
+    border: 3px solid #A88F4F; /* Dorado Antiguo */
+}
+
+.imagen-port img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s;
+    display: block;
+}
+
+.imagen-port:hover img {
+    transform: scale(1.05);
+}
+
+.hover-galeria {
+    position: absolute;
+    width: 50%;
+    height: 50%;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    opacity: 0;
+    transition: opacity 0.5s, transform 0.5s;
+    transform: scale(0);
+}
+
+.hover-galeria img {
+    width: 300px;
+    height: 300px;
+}
+
+/*
+.hover-galeria p {
+    color: #1A2C42; /* Azul Noche Profundo 
+    font-weight: 600;
+    font-family: 'Inter', sans-serif;
+}
+*/
+
+.imagen-port:hover .hover-galeria {
+    opacity: 1;
+    transform: scale(0.8);
+}
+
+.texto-introductorio{
+    align-items: center;
+
+}
+
+/* ESTILOS PARA LOS CONTROLES DEL CARRUSEL */
+.carousel-control-prev,
+.carousel-control-next {
+    width: 5%;
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+}
+
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+    opacity: 1;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: rgba(168, 143, 79, 0.8); /* Dorado Antiguo con transparencia */
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    background-size: 50%;
+}
+
+.carousel-control-prev-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23fff'%3e%3cpath d='M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z'/%3e%3c/svg%3e");
+}
+
+.carousel-control-next-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23fff'%3e%3cpath d='M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+}
+
+/* Asegurar que las flechas sean visibles en dispositivos móviles */
+@media (max-width: 768px) {
+    .carousel-control-prev,
+    .carousel-control-next {
+        width: 10%;
+    }
+    
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+        width: 30px;
+        height: 30px;
+    }
+}
+
+/******************************************NUESTRO TRABAJO**************************************/
+.header-nuestro-trabajo {
+    width: 100%;
+    height: 450px;/*ESTO MODIFICA EL TAMAñO DEL CONTENEDOR DE LA IMAGEN*/
+    background: 
+        radial-gradient(
+            circle at center, 
+            rgba(18, 17, 33, 0.9),  /* #A88F4F con 70% de opacidad */
+            rgba(37, 25, 49, 0.6)     /* #1A2C42 con 90% de opacidad */
+        ), 
+
+        url(IMAGENES/PORTADA-GALERIA.png);
+    background-size:100%; /*ESTE APARTADO CAMBIA EL TAMAÑO DE LA IMAGEN DE FONDO DEGRADADA*/
+    background-attachment: fixed;
+    position:relative;
+    background-position: center -2%; /* o el valor que necesites */
+}
+
+/******************************************************************************************/
+/*ESTE ES EL MARCO DE COLOR DORADO*/
+.video-port {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    border: 3px solid #A88F4F; /* Dorado Antiguo */
+}
+.video-local {
+    max-width: 20%;
+    max-height: 20%;
+}
+
+.video-description {
+    text-align: center; /* Alinea el contenido inline/inline-block */
+}
+
+.contenedor {
+    padding-top:5%; /* CON ESTO SE CAMBIA EL ESPACIADO ENTRE LA BARRA DE NAVEHACI9ON Y EL CONTENEDOR*/
+    margin: auto;
+    overflow: hidden;
+    padding-block-end: 55px;
+
+}
+/*ESTO MODIFICA EL VIDEO*/
+.contenedor-video {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*min-height: 30hv;*/ /* Opcional: ajusta la altura */
+}
+
+/******************************************************************************************/
+/* SERVICIOS */
+.about-services {
+    background: #ffffff; /* Azul Noche Profundo */
+    padding-left: 75px;
+    padding-right: 75px;
+    padding-top: -1%;
+}
+
+.about-services p{
+    font-family: 'Cormorant Garamond', serif; /*LETRA CORMORANT*/
+    font-weight: 400;
+    text-align: center;
+    color: #707070; /* Gris Piedra */
+
+}
+
+.servicio-cont {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+}
+.servicio-cont h3{
+    font-family: "Times New Roman", Times, serif;
+    font-weight: 600;
+    margin: 10px 0;
+    color:#A88F4F; /* Azul Noche Profundo */
+    font-weight: normal;
+
+}
+
+.servicio-ind {
+    text-align: center;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    transition: transform 0.3s;
+    background-color:#F8F4EE; /* Crema Suave */
+    border: 1px solid #A88F4F; /* Dorado Antiguo */
+}
+
+.servicio-ind:hover {
+    transform: translateY(-10px);
+}
+
+.servicio-ind img {
+    width: 100%;
+    max-width: 150px;
+    height: 30%;
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+/******************************************NUESTROS SERVICIOS**************************************/
+.header-nuestros-servicios {
+    width: 100%;
+    height: 450px;/*ESTO MODIFICA EL TAMAñO DEL CONTENEDOR DE LA IMAGEN*/
+    background: 
+        radial-gradient(
+            circle at center, 
+            rgba(18, 17, 33, 0.9),  /* #A88F4F con 70% de opacidad */
+            rgba(37, 25, 49, 0.6)     /* #1A2C42 con 90% de opacidad */
+        ), 
+
+        url(IMAGENES/PORTADA-SERVICIOS.png);
+    background-size:100%; /*ESTE APARTADO CAMBIA EL TAMAÑO DE LA IMAGEN DE FONDO DEGRADADA*/
+    background-attachment: fixed;
+    position:relative;
+    background-position: center -2%; /* o el valor que necesites */
+}
+
+/******************************************************************************************/
+/* TESTIMONIOS/CLIENTES */
+.cards {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 30px;
+    padding: 40px 0;
+}
+
+.card {
+
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    width: 300px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    border: 1px solid #A88F4F; /* Dorado Antiguo */
+    transition: transform 0.3s;
+
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.card img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border: 3px solid #A88F4F; /* Dorado Antiguo */
+    border-radius: 5%;
+    display: block;
+}
+
+.contenido-texto-card {
+    width: 60%;
+    color: #F5F5DC; /* Crema Suave */
+}
+
+.contenido-texto-card h4 {
+    color: #A88F4F; /* Dorado Antiguo */
+    font-family:"Times New Roman", Times, serif; 
+    font-weight: 600;
+    font-weight: normal;
+}
+
+.contenido-texto-card p {
+    font-weight: 300;
+    padding-top: 5px;
+    font-style: italic;
+    color: #000000;
+    font-family:'Cormorant Garamond', serif;
+}
+
+.clientes-contenedor{
+    padding-left: 75px;
+    padding-right: 75px;
+
+}
+
+    /* Contactanos */
+.contacto-contenedor{
+    padding-top: 12%; /*AQUI SE CONTROLA LA SEPARACION ENTRE EL TITULO Y LA BARRA DE NAVEGACION*/
+    padding-left: 75px;
+    padding-right: 75px;
+    padding-block-end: 55px;
+
+}
+.contact-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 50px;
+}
+
+.contact-info h3 {
+    margin-bottom: 20px;
+    font-family: 'Cormorant Garamond', serif; /*LETRA CORMORANT*/
+
+
+}
+
+.contact-info p {
+    margin-bottom: 15px;
+    font-family: 'Cormorant Garamond', serif; /*LETRA CORMORANT*/
+
+
+}
+.contact-form{
+        background: 
+    linear-gradient(
+        to right, 
+        rgba(168, 143, 79, 0.2),  /* #A88F4F con 70% de opacidad */
+        rgba(26, 44, 66, 0.8)     /* #1A2C42 con 90% de opacidad */
+    ), 
+    url(IMAGENES/Fondo\ -\ Formulario.jpg);
+background-size:50%; /*ESTE APARTADO CAMBIA EL TAMAÑO DE LA IMAGEN DE FONDO DEGRADADA*/
+background-attachment: fixed;
+position: relative;
+
+
+}
+
+.contact-form form{
+    padding-left: 17%;
+}
+
+.contact-form input,
+.contact-form textarea {
+    font-family: 'Cormorant Garamond', serif; /*LETRA CORMORANT*/
+    width: 80%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+}
+
+.contact-form textarea {
+    height: 150px;
+
+}
+
+.contact-form a {
+    font-family: 'Cormorant Garamond', serif; /*LETRA CORMORANT*/
+}
+
+.map-container {
+    margin-top: 30px;
+    height: 300px;
+    overflow: hidden;
+}
+
+.map-container iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+/* PIE DE PÁGINA */
+footer {
+    background:#14172a;
+    padding: 60px 0 30px 0;
+    margin: auto;
+    overflow: hidden;
+    border-top: 2px solid #A88F4F; /* Dorado Antiguo */
+}
+
+.contenedor-footer {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+    width: 90%;
+    margin: auto;
+    padding-bottom: 50px;
+    border-bottom: 1px solid #A88F4F; /* Dorado Antiguo */
+    max-width: 1200px;
+}
+
+.content-foo {
+    text-align: center;
+}
+
+.content-foo h4 {
+    font-family: "Times New Roman", Times, serif;
+    color: #F5F5DC; /* Crema Suave */
+    border-bottom: 3px solid #A88F4F; /* Dorado Antiguo */
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.content-foo p {
+    font-family: "Times New Roman", Times, serif;
+    color: #F5F5DC; /* Crema Suave */
+    line-height: 1.6;
+    font-weight: 300;
+}
+
+.titulo-final {
+    font-family: "Times New Roman", Times, serif;
+    text-align: center;
+    font-size: 24px;
+    margin: 20px 0 0 0;
+    color: #A88F4F; /* Dorado Antiguo */
+    font-weight: 400;
+}
+
+.social-icons i {
+    font-size: 24px; /* Tamaño personalizado */
+    color: #c9a145;
+}
+
+/*BOTON FLOTANTE*/
+.boton-flotante {
+    position: fixed;
+    bottom: 20px;
+    right: 40px;
+    z-index: 100;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.shareButton {
+    border: none;
+    border-radius: 50%;
+    background: #c9a145;
+    padding: 1rem;
+    overflow: hidden;
+    outline: none;
+    width: 24px;
+    height: 24px;
+    box-sizing: content-box;
+    transition: all 200ms;
+    position: relative;
+    opacity: 1;
+    transform: scale(1);
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+    cursor: pointer;
+    margin: 0.25rem 0;
+}
+
+.shareButton:hover {
+    transform: scale(1.1) translateY(-3px);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.25);
+}
+
+.shareButton svg {
+    display: block;
+    fill: #1a2c42;
+    width: 24px;
+    height: 24px;
+    opacity: 1;
+    transition: all 150ms;
+    transform: scale(1);
+}
+
+/* Botón principal - siempre visible */
+.shareButton.main .share,
+.shareButton.main .close,
+.shareButton.main .check {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    transition: all 150ms;
+}
+
+/* Estado inicial - solo share visible */
+.shareButton.main .share {
+    transform: rotate(0) scale(1);
+    opacity: 1;
+}
+
+.shareButton.main .close,
+.shareButton.main .check {
+    opacity: 0;
+    transform: rotate(90deg) scale(0);
+}
+
+/* Estados abiertos */
+.shareButton.main.open .share {
+    opacity: 0;
+    transform: rotate(90deg) scale(0);
+}
+
+.shareButton.main.open .close {
+    opacity: 1;
+    transform: rotate(0) scale(1);
+}
+
+.shareButton.main.sent .share,
+.shareButton.main.sent .close {
+    opacity: 0;
+    transform: rotate(90deg) scale(0);
+}
+
+.shareButton.main.sent .check {
+    opacity: 1;
+    transform: rotate(0) scale(1);
+}
+
+/* Botones de redes sociales - inicialmente ocultos */
+.shareButton:not(.main) {
+    width: 0;
+    height: 0;
+    padding: 0;
+    margin: 0;
+    opacity: 0;
+    transform: scale(0);
+    overflow: hidden;
+}
+
+/* Estados abiertos para botones sociales */
+.shareButton.open:not(.main) {
+    width: 24px;
+    height: 24px;
+    padding: 1rem;
+    margin: 0.25rem 0;
+    opacity: 1;
+    transform: scale(1);
+}
+
+.shareButton.open:not(.main) svg {
+    width: 24px;
+    height: 24px;
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* Transiciones con retraso para animación escalonada */
+.shareButton.fb.open {
+    transition-delay: 100ms;
+}
+
+.shareButton.ig.open {
+    transition-delay: 50ms;
+}
+
+.shareButton.wa.open {
+    transition-delay: 0ms;
+}
+/* Media Queries para Responsive Design */
+
+/* Tablets y pantallas medianas */
+@media (max-width: 1024px) {
+    html {
+        font-size: 14px;
+    }
+    
+    nav {
+        padding: 15px 3%;
+    }
+    
+    .textos-header h1 {
+        font-size: 2.8rem;
+    }
+    
+    .textos-header h2 {
+        font-size: 1.5rem;
+    }
+    
+
+    
+    .galeria-hero {
+        padding-left: 0;
+        text-align: center;
+    }
+    
+    .home-cont {
+        grid-template-columns: repeat(auto-fit, minmax(75px, 1fr));
+        justify-items: center;
+    }
+    
+    .img-principal {
+        width: 75%;
+    }
+    
+    .tarjeta-item,
+    .tarjeta-overlay {
+        height: 75px;
+        width: 75px;
+    }
+    
+    .portfolio .container-fluid .row {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        row-gap: 0px; /* Más separación entre filas */
+        justify-items: center;
+        padding-right: 150px;
+    }
+
+    .portfolio .gallery .item-img {
+        height: 300px; /* Ajustar según el nuevo minmax */
+        width: 300px;
+    }
+
+    
+    .portafolio,
+    .about-services,
+    .clientes-contenedor,
+    .contacto-contenedor {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+    
+    .contact-form form {
+        padding-left: 5%;
+    }
+    
+    .contact-form input,
+    .contact-form textarea {
+        width: 95%;
+    }
+    
+    /* ventana emergente */
+    .custom-lightbox-container {
+        margin: 20px;
+        padding-top: 1.5%;
+        max-width: 95%;
+    }
+    
+    .custom-lightbox-image {
+        max-height: 65vh;
+    }
+    
+    .custom-lightbox-description {
+        padding: 15px;
+    }
+    
+    .custom-lightbox-description h1 {
+        font-size: 1.4rem;
+        margin-bottom: 8px;
+    }
+    
+    .custom-lightbox-description p {
+        font-size: 0.95rem;
+    }
+}
+
+/* Tablets pequeñas y móviles grandes */
+@media (max-width: 768px) {
+    html {
+        font-size: 13px;
+    }
+    
+    nav {
+        flex-direction: column;
+        padding: 10px 5%;
+    }
+    
+    .logo-container {
+        height: 60px;
+        margin-bottom: 10px;
+    }
+    
+    .nav-links {
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .nav-links a {
+        font-size: 14px;
+    }
+    
+    .header-home,
+    .header-quienes-somos,
+    .header-nuestro-trabajo,
+    .header-nuestros-servicios {
+        height: 400px;
+        background-attachment: scroll;
+    }
+    
+    .textos-header {
+        height: 350px;
+        padding-top: 50px;
+    }
+    
+    .textos-header h1 {
+        font-size: 2.2rem;
+    }
+    
+    .textos-header h2 {
+        font-size: 1.3rem;
+    }
+    
+    .titulo,
+    .titulo-blanco {
+        font-size: 2.5rem;
+    }
+    
+    .titulo2 {
+        font-size: 1.8rem;
+    }
+    
+    .contenedor {
+        padding-top: 15%;
+    }
+    
+    .portfolio .container-fluid .row {
+        grid-template-columns: repeat(auto-fit, minmax(175px, 1fr));
+        row-gap: 0px; /* Más separación entre filas */
+        justify-items: center;
+        padding-right: 65px;
+    }
+
+    .portfolio .gallery .item-img {
+        height: 175px; /* Ajustar según el nuevo minmax */
+        width: 175px;
+    }
+    
+    .home-cont {
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+        gap: 10px;
+    }
+
+    .img-principal {
+        width: 75%;
+    }
+    
+    .tarjeta-item,
+    .tarjeta-overlay {
+        height: 100px;
+        width: 100px;
+    }
+    
+    .cards {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .card {
+        width: 100%;
+        max-width: 350px;
+    }
+    
+    .servicio-cont {
+        grid-template-columns: 1fr;
+    }
+    
+    .galeria-port {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+
+    .grid-hero {
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+        gap: 40px;
+    }
+
+    
+    .contact-container {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    .contenedor-footer {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    
+    .shareButtons {
+        bottom: 1rem;
+        right: 1rem;
+    }
+
+    /* ventana emergente */
+    .custom-lightbox-container {
+        margin: 15px;
+        padding-top: 1%;
+        max-width: 98%;
+        border-radius: 8px;
+    }
+    
+    .custom-lightbox-image {
+        max-height: 60vh;
+    }
+    
+    .custom-lightbox-close {
+        top: 10px;
+        right: 10px;
+        width: 35px;
+        height: 35px;
+        font-size: 20px;
+    }
+    
+    .custom-lightbox-description {
+        padding: 12px;
+    }
+    
+    .custom-lightbox-description h1 {
+        font-size: 1.3rem;
+        margin-bottom: 6px;
+    }
+    
+    .custom-lightbox-description p {
+        font-size: 0.9rem;
+        line-height: 1.4;
+    }
+}
+
+/* Móviles */
+@media (max-width: 480px) {
+    html {
+        font-size: 12px;
+    }
+    
+    nav {
+        padding: 8px 3%;
+    }
+    
+    .logo-text {
+        font-size: 20px;
+    }
+    
+    .nav-links {
+        gap: 10px;
+    }
+    
+    .nav-links a {
+        font-size: 12px;
+    }
+    
+    .header-home,
+    .header-quienes-somos,
+    .header-nuestro-trabajo,
+    .header-nuestros-servicios {
+        height: 300px;
+        background-size: cover;
+    }
+    
+    .textos-header {
+        height: 250px;
+        padding-top: 30px;
+    }
+    
+    .textos-header h1 {
+        font-size: 1.8rem;
+    }
+    
+    .textos-header h2 {
+        font-size: 1.1rem;
+    }
+    
+    .titulo,
+    .titulo-blanco {
+        font-size: 2rem;
+    }
+    
+    .titulo2 {
+        font-size: 1.5rem;
+        padding-top: 20px;
+    }
+    
+    .contenedor {
+        padding-top: 20%;
+    }
+    
+
+    
+    .portfolio .container-fluid .row {
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+        row-gap: 0px; /* Más separación entre filas */
+        justify-items: center;
+        padding-right: 50px;
+    }
+
+    .portfolio .gallery .item-img {
+        height: 100px; /* Ajustar según el nuevo minmax */
+        width: 100px;
+    }
+    
+    .home-cont {
+        grid-template-columns: repeat(auto-fit, minmax(75px, 1fr));
+        justify-items: center;
+    }
+    
+    .img-principal {
+        width: 75%;
+    }
+    
+    .tarjeta-item,
+    .tarjeta-overlay {
+        height: 75px;
+        width: 75px;
+    }
+
+
+    
+    .portafolio,
+    .about-services,
+    .clientes-contenedor,
+    .contacto-contenedor {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    
+    .galeria-port {
+        grid-template-columns: 1fr;
+    }
+
+    .grid-hero {
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+        gap: 20px;
+    }
+
+    .imagen-port {
+        height: 300px;
+    }
+    
+    .servicio-ind {
+        padding: 20px;
+    }
+    
+    .contact-form form {
+        padding-left: 0;
+    }
+    
+    .contact-form input,
+    .contact-form textarea {
+        width: 100%;
+    }
+    
+    .boton-flotante {
+        right: 20px;
+        bottom: 15px;
+    }
+    
+    .shareButton {
+        width: 20px;
+        height: 20px;
+        padding: 0.8rem;
+    }
+    
+    .shareButton svg {
+        width: 20px;
+        height: 20px;
+    }
+
+    /* ventana emergente */
+    .custom-lightbox-container {
+        margin: 10px;
+        padding-top: 0.5%;
+        border-radius: 6px;
+        max-width: 99%;
+    }
+    
+    .custom-lightbox-image {
+        max-height: 50vh;
+    }
+    
+    .custom-lightbox-close {
+        top: 8px;
+        right: 8px;
+        width: 30px;
+        height: 30px;
+        font-size: 18px;
+    }
+    
+    .custom-lightbox-description {
+        padding: 10px;
+    }
+    
+    .custom-lightbox-description h1 {
+        font-size: 1.2rem;
+        margin-bottom: 5px;
+    }
+    
+    .custom-lightbox-description p {
+        font-size: 0.85rem;
+        line-height: 1.3;
+    }
+}
+
+/* Pantallas muy pequeñas */
+@media (max-width: 320px) {
+    .textos-header h1 {
+        font-size: 1.5rem;
+    }
+    
+    .textos-header h2 {
+        font-size: 1rem;
+    }
+    
+    .portfolio .container-fluid .row {
+        grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+        row-gap: 0px; /* Más separación entre filas */
+        justify-items: center;
+        padding-right: 10px;
+    }
+
+    .portfolio .gallery .item-img {
+        height: 50px; /* Ajustar según el nuevo minmax */
+        width: 50px;
+    }
+
+    
+    .tarjeta-item,
+    .tarjeta-overlay {
+        height: 180px;
+        width: 180px;
+    }
+    
+    .imagen-port {
+        height: 250px;
+    }
+
+    /* ventana emergente */
+    .custom-lightbox-container {
+        margin: 5px;
+        padding-top: 0%;
+        border-radius: 4px;
+        max-width: 100%;
+    }
+    
+    .custom-lightbox-image {
+        max-height: 45vh;
+    }
+    
+    .custom-lightbox-close {
+        top: 5px;
+        right: 5px;
+        width: 25px;
+        height: 25px;
+        font-size: 16px;
+    }
+    
+    .custom-lightbox-description {
+        padding: 8px;
+    }
+    
+    .custom-lightbox-description h1 {
+        font-size: 1.1rem;
+        margin-bottom: 4px;
+    }
+    
+    .custom-lightbox-description p {
+        font-size: 0.8rem;
+        line-height: 1.2;
+    }    
+}
+
+

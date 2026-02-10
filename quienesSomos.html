@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8"> <!-- PERMITE USAR CARACTERES ESPECIALES POR EJEMPLO LA Ñ -->
+        <meta content="width=device-width, initial-scale=1.0" name="viewport"> <!-- CONTROLA LAS DIMENSIONES QUE SE MUESTRAN EN DISPOSITIVOS MÓVILES -->
+        <meta content="Aeon Tatoo Studio" name="keywords"> <!-- PALABRAS CLAVE PARA EL MOTOR DE BUSQUEDA -->
+        <meta content="Tatuajes, diseño, perforaciones y joyeria." name="description"><!-- DESCRIPCION DE MI PAGINA WEB -->
+        <title>ÆON Tatoo Studio</title> <!-- TITULO DEL SITIO WEB -->
+        <!-- <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon"> -->
+        <link rel="stylesheet" href="diseño.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"> <!-- boostrap -->
+
+        <!-- FUENTES QUE SE UTILIZAN EN LA PAGINA WEB-->
+        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Cormorant+Garamond:wght@300;400;500;600&family=Cinzel:wght@400;500;600;700&family=Marcellus&family=Tangerine:wght@400;700&family=Abril+Fatface&family=Bodoni+Moda:wght@400;500;600&family=Dancing+Script:wght@400;500;600;700&family=Great+Vibes&family=Parisienne&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css">
+
+        <!-- ICONO DE LA PAGINA WEB -->
+        <link rel="icon" type="image/png" href="IMAGENES/LogoWeb-removebg-preview.png">
+    </head>
+
+    <!-- CUERPO DE LA PÁGINA WEB -->
+    <body>
+        <header>
+            <!-- BARRA DE NAVEGCION -->
+            <nav>
+                <!-- LOGO -->
+                <a href="index.html">
+                            <div class="logo-container">
+                    <img src="IMAGENES/LogoSecundario-removebg-preview.png" class="logo-img" width="200"> 
+                </div>
+                </a>
+                <!-- OTRAS VENTANAS -->
+                <div class="nav-links">
+                    <a href="quienesSomos.html" style="color: #A88F4F;"><i class="fas fa-users"></i> QUIENES SOMOS</a>
+                    <a href="galeria.html"><i class="fas fa-images"></i> GALERIA</a>
+                    <a href="servicios.html"><i class="fas fa-concierge-bell"></i> SERVICIOS</a>
+                    <a href="contacto.html"><i class="fas fa-map-marker-alt"></i> CONTACTO</a>
+                </div>
+            </nav>
+
+            <!-- CONTENIDO DE PORTADA -->
+            <div class="textos-header header-quienes-somos">
+                <h1>Sobre Nosotros</h1>
+            </div>
+        </header>
+
+        <main>
+            <!-- SECCION DE TRAYECTORIA -->
+            <section id="Trayectoria" class="seccion-azul">
+                <div class="container">
+                    <h1 class="titulo">Más de 20 años contigo</h1>
+                    <p style="color: white;" class="cormorant" >Llevamos una larga trayectoria en este mercado, empezamos a inicios de los 2000 y durante todo este tiempo hemos sido líderes en cuanto a todo lo que respecta a tatuajes, perforaciones, joyería y diseño.</p>
+                    <p style="color: white;" class="cormorant" >Nuestro establecimiento siempre ha contado con todas las medidas de asepcia, bioseguridad y excelente trato a nuestros clientes, ganando así el reconocimiento y la buena reputación con nuestros clientes.</p>
+                </div>
+            </section>
+
+            <!-- SECCION NUESTROS ARTISTAS -->
+            <section id="NuestrosArtistas">
+                <div class="portfolio">
+                    <h1 class="titulo">Nuestros artistas</h1>
+                    <div class="container-fluid">
+                        <div class="row">
+                            <!-- UN SOLO CONTENEDOR GALLERY PARA TODOS LOS ARTISTAS -->
+                            <div class="gallery col-sm-12">
+                                <!--ARTISTA 1-->
+                                <div class="col-lg-4 col-sm-6 spring no-padding">
+                                    <div class="item-img">
+                                        <div class="part-img">
+                                            <img src="IMAGENES/Artista - Anís Ink.png" alt="image">
+                                            <div class="overlay-img">
+                                                <h4>Anís Ink</h4>
+                                                <h6>Diseñadora-Tauadora</h6>
+                                            </div>
+                                        <!-- VENTANA EMERGENTE -->
+                                        <div>
+                                            <a class="emergente-btn" href="IMAGENES/Artista - Anís Ink.png" data-title="desc-emergente-1">
+                                                <i class="fa fa-plus text-primary" style="font-size: 60px;"></i>
+                                            </a>
+                                            <div class="emergente-description" id="desc-emergente-1">
+                                                <h1>Anís Ink</h1>
+                                                <p>Destacada por modernizar el estilo tradicional, utilizando líneas más elaboradas, una paleta de colores más amplia y vibrante.</p>
+                                            </div>
+                                        </div>
+                                        </div>
+                                    </div>
+                                </div> 
+                                <!--ARTISTA 2-->
+                                <div class="col-lg-4 col-sm-6 spring no-padding">
+                                    <div class="item-img">
+                                        <div class="part-img">
+                                            <img src="IMAGENES/Artista - Fernando.jpg" alt="image">
+                                            <div class="overlay-img">
+                                                <h4>Nanx</h4>
+                                                <h6>Perforador-Diseñador</h6>
+                                            </div>
+                                        <!-- VENTANA EMERGENTE -->
+                                        <div>
+                                            <a class="emergente-btn" href="IMAGENES/Artista - Fernando.jpg" data-title="desc-emergente-2">
+                                                <i class="fa fa-plus text-primary" style="font-size: 60px;"></i>
+                                            </a>
+                                            <div class="emergente-description" id="desc-emergente-2">
+                                                <h1>Nanx</h1>
+                                                <p>Énfasis en la saturación profunda del negro y la composición de alto impacto.</p>
+                                            </div>
+                                        </div>
+                                        </div>
+                                    </div>
+                                </div>          
+                                <!--ARTISTA 3-->
+                                <div class="col-lg-4 col-sm-6 spring no-padding">
+                                    <div class="item-img">
+                                        <div class="part-img">
+                                            <img src="IMAGENES/Artista - Valkiria.jpg" alt="image">
+                                            <div class="overlay-img">
+                                                <h4>Valkiria</h4>
+                                                <h6>Tatuadora</h6>
+                                            </div>
+                                        <!-- VENTANA EMERGENTE -->
+                                        <div>
+                                            <a class="emergente-btn" href="IMAGENES/Artista - Valkiria.jpg" data-title="desc-emergente-3">
+                                                <i class="fa fa-plus text-primary" style="font-size: 60px;"></i>
+                                            </a>
+                                            <div class="emergente-description" id="desc-emergente-3">
+                                                <h1>Valkiria</h1>
+                                                <p>Pulso fírme y uso de plantillas (stencils) precisas, dominio de la aguja round liner.</p>
+                                            </div>
+                                        </div>
+                                        </div>
+                                    </div>
+                                </div>                
+                                <!--ARTISTA 4-->
+                                <div class="col-lg-4 col-sm-6 spring no-padding">
+                                    <div class="item-img">
+                                        <div class="part-img">
+                                            <img src="IMAGENES/Artista-Anubis.png" alt="image">
+                                            <div class="overlay-img">
+                                                <h4>Anubis</h4>
+                                                <h6>Artista-Perforadora</h6>
+                                            </div>
+                                        <!-- VENTANA EMERGENTE -->
+                                        <div>
+                                            <a class="emergente-btn" href="IMAGENES/Artista-Anubis.png" data-title="desc-emergente-4">
+                                                <i class="fa fa-plus text-primary" style="font-size: 60px;"></i>
+                                            </a>
+                                            <div class="emergente-description" id="desc-emergente-4">
+                                                <h1>Anubis</h1>
+                                                <p>Una de las tatuadoras más conocidas a nivel mundial, famosa por el realismo en tonos negros y grises.</p>
+                                            </div>
+                                        </div>
+                                        </div>
+                                    </div>
+                                </div>                   
+                                <!--ARTISTA 5-->
+                                <div class="col-lg-4 col-sm-6 spring no-padding">
+                                    <div class="item-img">
+                                        <div class="part-img">
+                                            <img src="IMAGENES/Artista-Odin.png" alt="image">
+                                            <div class="overlay-img">
+                                                <h4>Odin</h4>
+                                                <h6>Perforador</h6>
+                                            </div>
+                                        <!-- VENTANA EMERGENTE -->
+                                        <div>
+                                            <a class="emergente-btn" href="IMAGENES/Artista-Odin.png" data-title="desc-emergente-5">
+                                                <i class="fa fa-plus text-primary" style="font-size: 60px;"></i>
+                                            </a>
+                                            <div class="emergente-description" id="desc-emergente-5">
+                                                <h1>Odin</h1>
+                                                <p>Figura histórica que ayudó a definir el estilo tradicional americano (old school).</p>
+                                            </div>
+                                        </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--ARTISTA 6-->
+                                <div class="col-lg-4 col-sm-6 spring no-padding">
+                                    <div class="item-img">
+                                        <div class="part-img">
+                                            <img src="IMAGENES/Artista-Kitsune.png" alt="image">
+                                            <div class="overlay-img">
+                                                <h4>Kitsune</h4>
+                                                <h6>Tatuador</h6>
+                                            </div>
+                                        <!-- VENTANA EMERGENTE -->
+                                        <div>
+                                            <a class="emergente-btn" href="IMAGENES/Artista-Kitsune.png" data-title="desc-emergente-6">
+                                                <i class="fa fa-plus text-primary" style="font-size: 60px;"></i>
+                                            </a>
+                                            <div class="emergente-description" id="desc-emergente-6">
+                                                <h1>Kitsune</h1>
+                                                <p>Reconocido por sus microtatuajes de líneas finas y diseños intrincados.</p>
+                                            </div>
+                                        </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- PIE DE PÁGINA -->
+        <footer>
+            <div class="contenedor-footer">
+                <!-- Información de la tienda -->
+                <div class="content-foo">
+                    <h4>Estudio ÆON</h4>
+                    <p>Av. Diego de Almagro N24-416 y Av. La Coruña<br>
+                    Sector La Floresta, Quito</p>
+                </div>
+
+                <!-- Contacto -->
+                <div class="content-foo">
+                    <h4>Teléfono</h4>
+                    <p>+593 99 972 0593<br>
+                    <small>Lunes a Sábado: 10:00 - 19:00</small></p>
+                    
+                    <h4 style="margin-top:15px;">Email</h4>
+                    <p>solegranoble17@gmail.com<br>
+                    <small>Respuesta en 24-48 horas</small></p>
+                </div>
+
+                <!-- Redes sociales -->
+                <div class="content-foo">
+                    <h4>Síguenos</h4>
+                    <div class="social-icons">
+                        <a href="https://www.instagram.com/anisgranoble/" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.facebook.com/Devsoledgranoble" target="_blank"><i class="fab fa-facebook"></i></a>
+                        <a href="https://wa.me/qr/B73P3IY7AWVBG1" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+            </div>
+            <h2 class="titulo-final">&copy; ÆON Tatoo Studio Designed by DenisseG - 2025</h2>
+        </footer>
+        
+        <!-- BOTON FLOTANTE -->
+        <div class="boton-flotante">
+            <a>
+                <button class="shareButton main">
+                    <svg class="share" viewBox="0 0 24 24">
+                        <path d="M18,16.08C17.24,16.08 16.56,16.38 16.04,16.85L8.91,12.7C8.96,12.47 9,12.24 9,12C9,11.76 8.96,11.53 8.91,11.3L15.96,7.19C16.5,7.69 17.21,8 18,8A3,3 0 0,0 21,5A3,3 0 0,0 18,2A3,3 0 0,0 15,5C15,5.24 15.04,5.47 15.09,5.7L8.04,9.81C7.5,9.31 6.79,9 6,9A3,3 0 0,0 3,12A3,3 0 0,0 6,15C6.79,15 7.5,14.69 8.04,14.19L15.16,18.34C15.11,18.55 15.08,18.77 15.08,19C15.08,20.61 16.39,21.91 18,21.91C19.61,21.91 20.92,20.61 20.92,19A2.92,2.92 0 0,0 18,16.08Z" />
+                    </svg>
+                    <svg class="check" viewBox="0 0 24 24">
+                        <path d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z" />
+                    </svg>
+                    <svg class="close" viewBox="0 0 24 24">
+                        <path d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z" />
+                    </svg>
+                </button>
+            </a>
+
+            <a href="https://www.facebook.com/Devsoledgranoble" target="_blank">
+                <button class="shareButton fb">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M17,2V2H17V6H15C14.31,6 14,6.81 14,7.5V10H14L17,10V14H14V22H10V14H7V10H10V6A4,4 0 0,1 14,2H17Z" />
+                    </svg>
+                </button>
+            </a>
+
+            <a href="https://www.instagram.com/anisgranoble/" target="_blank">
+                <button class="shareButton ig">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M7.8,2H16.2C19.4,2 22,4.6 22,7.8V16.2A5.8,5.8 0 0,1 16.2,22H7.8C4.6,22 2,19.4 2,16.2V7.8A5.8,5.8 0 0,1 7.8,2M7.6,4A3.6,3.6 0 0,0 4,7.6V16.4C4,18.39 5.61,20 7.6,20H16.4A3.6,3.6 0 0,0 20,16.4V7.6C20,5.61 18.39,4 16.4,4H7.6M17.25,5.5A1.25,1.25 0 0,1 18.5,6.75A1.25,1.25 0 0,1 17.25,8A1.25,1.25 0 0,1 16,6.75A1.25,1.25 0 0,1 17.25,5.5M12,7A5,5 0 0,1 17,12A5,5 0 0,1 12,17A5,5 0 0,1 7,12A5,5 0 0,1 12,7M12,9A3,3 0 0,0 9,12A3,3 0 0,0 12,15A3,3 0 0,0 15,12A3,3 0 0,0 12,9Z" />
+                    </svg>
+                </button>
+            </a>
+
+            <a href="https://wa.me/qr/B73P3IY7AWVBG1" target="_blank">
+                <button class="shareButton wa">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M16.75,13.96C17,14.09 17.16,14.16 17.21,14.26C17.27,14.37 17.25,14.87 17,15.44C16.8,16 15.76,16.54 15.3,16.56C14.84,16.58 14.83,16.92 12.34,15.83C9.85,14.74 8.35,12.08 8.23,11.91C8.11,11.74 7.27,10.53 7.31,9.3C7.36,8.08 8,7.5 8.26,7.26C8.5,7 8.77,6.97 8.94,7H9.41C9.56,7 9.77,6.94 9.96,7.45L10.65,9.32C10.71,9.45 10.75,9.6 10.66,9.76L10.39,10.17L10,10.59C9.89,10.71 9.74,10.84 9.88,11.09C10,11.35 10.5,12.08 11.21,12.71C12.11,13.5 12.91,13.84 13.18,14C13.45,14.15 13.57,14.11 13.72,13.96L14.5,13.14C14.69,12.94 14.93,12.89 15.09,12.99L16.75,13.96M12,2A10,10 0 0,1 22,12A10,10 0 0,1 12,22C10.03,22 8.2,21.43 6.65,20.45L2,22L3.55,17.35C2.57,15.8 2,13.97 2,12A10,10 0 0,1 12,2M12,4A8,8 0 0,0 4,12C4,13.72 4.54,15.31 5.46,16.61L4.5,19.5L7.39,18.54C8.69,19.46 10.28,20 12,20A8,8 0 0,0 20,12A8,8 0 0,0 12,4Z" />
+                    </svg>
+                </button>
+            </a>
+        </div>
+
+        <!-- SCTIPT se utiliza para insertar código ejecutable, principalmente JavaScript -->
+            <!-- LOCALES -->
+            <!-- MENÚ HAMBURGUESA -->
+        <script src="botonFlotante.js"></script> 
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="emergente.js"></script> 
+    </body>
+</html>
