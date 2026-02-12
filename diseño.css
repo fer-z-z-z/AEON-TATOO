@@ -1663,8 +1663,10 @@ footer {
     .header-quienes-somos,
     .header-nuestro-trabajo,
     .header-nuestros-servicios {
-        height: 300px;
-        background-size: cover;
+        padding-top: 100px!important;
+        height: 350px!important;
+        background-position: center -850%; /* o el valor que necesites */
+
     }
     
     .textos-header {
@@ -1694,22 +1696,18 @@ footer {
         padding-top: 20%;
     }
     
-
     
     .portfolio .container-fluid .row {
-        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-        row-gap: 0px; /* Más separación entre filas */
-        justify-items: center;
-        padding-right: 50px;
+        justify-items: center !important;
     }
 
     .portfolio .gallery .item-img {
-        height: 100px; /* Ajustar según el nuevo minmax */
-        width: 100px;
+        height: 250px; /* Ajustar según el nuevo minmax */
+        width: 250px;
     }
     
     .home-cont {
-        grid-template-columns: repeat(auto-fit, minmax(75px, 1fr));
+        grid-template-columns: 1fr;
         justify-items: center;
     }
     
@@ -1719,18 +1717,24 @@ footer {
     
     .tarjeta-item,
     .tarjeta-overlay {
-        height: 75px;
-        width: 75px;
+        height: 250px;
+        width: 250px;
     }
 
 
     
     .portafolio,
     .about-services,
-    .clientes-contenedor,
-    .contacto-contenedor {
+    .clientes-contenedor {
         padding-left: 15px;
         padding-right: 15px;
+    }
+
+
+
+    .contacto-contenedor{
+        padding-top: 150px!important;
+
     }
     
     .galeria-port {
